@@ -1,0 +1,22 @@
+@mixin bg-img($url) {
+	background: url($url)no-repeat center;
+	background-size: cover;
+}
+
+@mixin flex-col($n, $width: 8.3333) {
+	padding: 0 15px;
+	flex: 0 1 percentage($n * $width/100);
+	max-width: percentage($n * $width/100);
+	//Safari
+	// flex-flow: wrap;
+}
+
+@mixin flex() {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	width: 100%;
+}
+@function rem($pixels, $context: 16) {
+	@return #{$pixels/$context}rem;
+}
